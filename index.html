@@ -151,6 +151,72 @@
       opacity: 0.9;
     }
 
+    /* Review Section */
+    .review-section {
+      background: #f9fafb;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .review-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .review-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .review-stars {
+      color: #fbbf24;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
+
+    .review-rating {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #6b7280;
+    }
+
+    .review-quote {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #374151;
+      margin: 1.5rem 0;
+      font-style: italic;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .review-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .review-link:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
     /* Features Section */
     .features {
       padding: 5rem 2rem;
@@ -349,6 +415,16 @@
         font-size: 1.125rem;
       }
 
+      .review-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .review-quote {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
       .features h2,
       .cta h2 {
         font-size: 2rem;
@@ -378,6 +454,26 @@
       </svg>
       Download for Windows
     </a>
+  </section>
+
+  <!-- Review Section -->
+  <section class="review-section">
+    <div class="review-container">
+      <div class="review-header">
+        <span class="review-logo">Softpedia</span>
+        <span class="review-stars">★★★★★</span>
+        <span class="review-rating">5.0/5</span>
+      </div>
+      <blockquote class="review-quote">
+        "Valido is an exciting new release that simplifies verifying and extracting data from PDF documents without seeming too complicated. The software should prove very useful for workflows where you constantly have to check and verify PDF documents."
+      </blockquote>
+      <a href="https://www.softpedia.com/get/Office-tools/PDF/Valido.shtml" class="review-link" target="_blank" rel="noopener">
+        Read full review on Softpedia →
+      </a>
+      <div style="margin-top: 1.5rem; color: #6b7280; font-size: 0.95rem;">
+        Also available on: <a href="https://www.softpedia.com/get/Office-tools/PDF/Valido.shtml" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none; font-weight: 500;">Download from Softpedia</a>
+      </div>
+    </div>
   </section>
 
   <!-- Features Section -->
