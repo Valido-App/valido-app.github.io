@@ -316,6 +316,141 @@
       object-fit: contain;
     }
 
+    /* Pricing Section */
+    .pricing-section {
+      padding: 5rem 2rem;
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    .pricing-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pricing-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .pricing-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
+    }
+
+    .pricing-card.popular {
+      border-color: var(--primary);
+      box-shadow: 0 5px 20px rgba(0, 102, 255, 0.15);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .pricing-plan {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-amount {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-amount .currency {
+      font-size: 1.5rem;
+      vertical-align: super;
+    }
+
+    .pricing-period {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 0.75rem 0;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pricing-features li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .pricing-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+
+    .pricing-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .pricing-note {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
     /* Features Section */
     .features {
       padding: 5rem 2rem;
@@ -540,6 +675,19 @@
       .features-grid {
         grid-template-columns: 1fr;
       }
+
+      .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .pricing-section h2 {
+        font-size: 2rem;
+      }
+
+      .pricing-amount {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
@@ -666,6 +814,62 @@
         <h3>Professional Reports</h3>
         <p>Export results as CSV, Excel, PDF, or JSON. Clean formatting, ready to use.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="pricing-container">
+      <h2>Simple, Transparent Pricing</h2>
+      <p class="pricing-subtitle">Choose the plan that works best for you. Try free for 7 days.</p>
+      
+      <div class="pricing-cards">
+        <!-- Monthly Plan -->
+        <div class="pricing-card">
+          <div class="pricing-plan">Monthly</div>
+          <div class="pricing-amount">
+            <span class="currency">$</span>14.20
+          </div>
+          <div class="pricing-period">per month, billed monthly</div>
+          
+          <ul class="pricing-features">
+            <li>Unlimited PDF processing</li>
+            <li>All validation rules</li>
+            <li>Custom calculations</li>
+            <li>Folder automation</li>
+            <li>Cloud storage integration</li>
+            <li>Export to CSV, Excel, PDF, JSON</li>
+            <li>7-day free trial</li>
+          </ul>
+          
+          <a href="https://rai89.gumroad.com/l/bdspjn" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
+        </div>
+
+        <!-- Annual Plan -->
+        <div class="pricing-card popular">
+          <span class="popular-badge">Save 12%</span>
+          <div class="pricing-plan">Annual</div>
+          <div class="pricing-amount">
+            <span class="currency">$</span>150
+          </div>
+          <div class="pricing-period">per year, billed annually</div>
+          
+          <ul class="pricing-features">
+            <li>Unlimited PDF processing</li>
+            <li>All validation rules</li>
+            <li>Custom calculations</li>
+            <li>Folder automation</li>
+            <li>Cloud storage integration</li>
+            <li>Export to CSV, Excel, PDF, JSON</li>
+            <li>7-day free trial</li>
+            <li>Priority support</li>
+          </ul>
+          
+          <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
+        </div>
+      </div>
+      
+      <p class="pricing-note">All prices exclude local taxes. Cancel anytime, no questions asked.</p>
     </div>
   </section>
 
