@@ -79,6 +79,77 @@
       color: var(--text-dark);
       line-height: 1.6;
       background: white;
+      padding-top: 70px;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 0.5rem 1.5rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+      color: white !important;
+    }
+
+    /* Tab Content */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
     }
 
     /* Hero Section */
@@ -162,51 +233,6 @@
     .price-info {
       margin-top: 1.5rem;
       font-size: 1rem;
-      opacity: 0.9;
-    }
-
-    .security-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      padding: 0.75rem 1.25rem;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 8px;
-      color: white;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.3s;
-      backdrop-filter: blur(10px);
-    }
-
-    .security-badge:hover {
-      background: rgba(255, 255, 255, 0.3);
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: translateY(-2px);
-    }
-
-    .security-badge svg {
-      width: 20px;
-      height: 20px;
-      fill: #10b981;
-    }
-
-    .security-badge-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.1rem;
-    }
-
-    .security-badge-title {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .security-badge-subtitle {
-      font-size: 0.8rem;
       opacity: 0.9;
     }
 
@@ -697,33 +723,45 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Validate and automate PDFs without uploading them anywhere</h1>
-    <p class="tagline">
-      Extract data • Create calculations • Automate workflows
-    </p>
-    <p class="performance">
-      <strong>50 PDFs in under 3 seconds.</strong> Works offline.
-    </p>
-    
-    <a href="https://github.com/Valido-App/valido-app.github.io/releases/download/v1.0.9/Valido-v1.0.9-Installer.zip" class="download-btn" onclick="gtag('event', 'download', {'event_category': 'engagement', 'event_label': 'v1.0.9'});">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-      </svg>
-      Download for Windows
-    </a>
-    
-    <a href="https://www.virustotal.com/gui/file/ff53849cc48226b2181cd4e3dc6968da63846b513b34413c6af4033404babbd7?nocache=1" class="security-badge" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5zm-1 14.5l-3.5-3.5 1.4-1.4 2.1 2.1 4.6-4.6 1.4 1.4-6 6z"/>
-      </svg>
-      <div class="security-badge-text">
-        <span class="security-badge-title">✓ Verified Safe</span>
-        <span class="security-badge-subtitle">0/70 on VirusTotal</span>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" onclick="showTab('home'); return false;">Valido</a>
+      <ul class="nav-menu">
+        <li><a onclick="showTab('home'); return false;" class="active" id="nav-home">Home</a></li>
+        <li><a onclick="showTab('features'); return false;" id="nav-features">Features</a></li>
+        <li><a onclick="showTab('download'); return false;" id="nav-download">Download</a></li>
+        <li><a onclick="showTab('pricing'); return false;" id="nav-pricing">Pricing</a></li>
+        <li><a onclick="showTab('about'); return false;" id="nav-about">About</a></li>
+        <li><a href="mailto:info@valido.site" id="nav-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Tab -->
+  <div id="home" class="tab-content active">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Validate and automate PDFs without uploading them anywhere</h1>
+      <p class="tagline">
+        Extract data • Create calculations • Automate workflows
+      </p>
+      <p class="performance">
+        <strong>50 PDFs in under 3 seconds.</strong> Works offline.
+      </p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+        <a href="#" onclick="showTab('download'); return false;" class="download-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          Get Started
+        </a>
+        <a href="#" onclick="showTab('features'); return false;" class="download-btn" style="background: rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.3);">
+          Learn More →
+        </a>
       </div>
-    </a>
-  </section>
+    </section>
 
   <!-- Review Section -->
   <section class="review-section">
@@ -741,25 +779,28 @@
       </a>
     </div>
   </section>
+  </div> <!-- End Home Tab -->
 
-  <!-- Cloud Storage Section -->
-  <section class="cloud-storage-section">
-    <h3>Connect to Your Cloud Storage</h3>
-    <p>Create automation jobs directly from your cloud storage accounts</p>
-    <div class="cloud-icons">
-      <div class="cloud-icon">
-        <img src="enterprise-icons/aws-icon.png" alt="Amazon AWS" title="Amazon AWS">
+  <!-- Features Tab -->
+  <div id="features" class="tab-content">
+    <!-- Cloud Storage Section -->
+    <section class="cloud-storage-section">
+      <h3>Connect to Your Cloud Storage</h3>
+      <p>Create automation jobs directly from your cloud storage accounts</p>
+      <div class="cloud-icons">
+        <div class="cloud-icon">
+          <img src="enterprise-icons/aws-icon.png" alt="Amazon AWS" title="Amazon AWS">
+        </div>
+        <div class="cloud-icon">
+          <img src="enterprise-icons/azure-icon.png" alt="Microsoft Azure" title="Microsoft Azure">
+        </div>
+        <div class="cloud-icon">
+          <img src="enterprise-icons/gcp-icon.png" alt="Google Cloud Platform" title="Google Cloud Platform">
+        </div>
       </div>
-      <div class="cloud-icon">
-        <img src="enterprise-icons/azure-icon.png" alt="Microsoft Azure" title="Microsoft Azure">
-      </div>
-      <div class="cloud-icon">
-        <img src="enterprise-icons/gcp-icon.png" alt="Google Cloud Platform" title="Google Cloud Platform">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features Section -->
+    <!-- Features Section -->
   <section class="features">
     <h2>PDF Automation Software with Custom Calculations</h2>
     
@@ -820,7 +861,10 @@
       </div>
     </div>
   </section>
+  </div> <!-- End Features Tab -->
 
+  <!-- Pricing Tab -->
+  <div id="pricing" class="tab-content">
   <!-- Pricing Section -->
   <section class="pricing-section">
     <div class="pricing-container">
@@ -876,8 +920,225 @@
       <p class="pricing-note">All prices exclude local taxes. Cancel anytime, no questions asked.</p>
     </div>
   </section>
+  </div> <!-- End Pricing Tab -->
+
+  <!-- Download Tab -->
+  <div id="download" class="tab-content">
+    <section class="hero">
+      <h1>Download Valido</h1>
+      <p class="tagline">
+        Get started with PDF automation today
+      </p>
+      <p class="performance">
+        <strong>Latest version: 1.0.9</strong> • Windows 10/11
+      </p>
+      
+      <a href="https://github.com/Valido-App/valido-app.github.io/releases/download/v1.0.9/Valido-v1.0.9-Installer.zip" class="download-btn" onclick="gtag('event', 'download', {'event_category': 'engagement', 'event_label': 'v1.0.9'});">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+        Download for Windows (v1.0.9)
+      </a>
+      
+      <div style="margin-top: 2rem; background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 12px; max-width: 600px; text-align: left;">
+        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">System Requirements:</h3>
+        <ul style="list-style-position: inside; opacity: 0.95;">
+          <li>Windows 10 or Windows 11</li>
+          <li>4GB RAM (8GB recommended)</li>
+          <li>200MB disk space</li>
+          <li>Internet connection for cloud storage features (optional)</li>
+        </ul>
+        
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;">What's Included:</h3>
+        <ul style="list-style-position: inside; opacity: 0.95;">
+          <li>7-day free trial</li>
+          <li>Full feature access</li>
+          <li>Automatic updates</li>
+          <li>No credit card required</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="review-section">
+      <div class="review-container">
+        <div class="review-header">
+          <span class="review-logo">Softpedia</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-rating">5.0/5</span>
+        </div>
+        <blockquote class="review-quote">
+          "Valido is an exciting new release that simplifies verifying and extracting data from PDF documents without seeming too complicated. The software should prove very useful for workflows where you constantly have to check and verify PDF documents."
+        </blockquote>
+        <a href="https://www.softpedia.com/get/Office-tools/PDF/Valido.shtml" class="review-link" target="_blank" rel="noopener">
+          Read full review on Softpedia →
+        </a>
+      </div>
+    </section>
+  </div> <!-- End Download Tab -->
+
+  <!-- Features Tab -->
+  <div id="features" class="tab-content">
+    <section style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+      <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Powerful Features for PDF Automation</h1>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L4 6V12C4 17 7 21 12 23C17 21 20 17 20 12V6L12 2Z"/>
+              <circle cx="12" cy="12" r="3" fill="white"/>
+            </svg>
+          </div>
+          <h3>100% Private</h3>
+          <p>Your documents never leave your computer. Zero cloud upload, zero data retention. Perfect for sensitive files.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="4" width="12" height="4" rx="1"/>
+              <rect x="6" y="10" width="12" height="4" rx="1"/>
+              <rect x="6" y="16" width="12" height="4" rx="1"/>
+            </svg>
+          </div>
+          <h3>Batch Processing</h3>
+          <p>Process hundreds or thousands of PDFs at once. Upload files or ZIP archives up to 2000 pages.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M8 2V6M16 2V6M4 10H20"/>
+            </svg>
+          </div>
+          <h3>Folder Automation</h3>
+          <p>Watch folders and automatically validate new PDFs on a schedule - hourly, daily, or weekly.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </div>
+          <h3>Custom Calculations</h3>
+          <p>Extract data fields then create formulas using them. Calculate totals, percentages, differences. Use previous calculations in new ones.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2Z"/>
+              <path d="M14 2V8H20"/>
+            </svg>
+          </div>
+          <h3>Professional Reports</h3>
+          <p>Export results as CSV, Excel, PDF, or JSON. Clean formatting, ready to use.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Cloud Storage Section -->
+    <section class="cloud-storage-section">
+      <div class="cloud-storage-container">
+        <h3>Connect to Your Cloud Storage</h3>
+        <p>Create automation jobs directly from your cloud storage accounts</p>
+        <div class="cloud-icons">
+          <img src="/enterprise-icons/aws.svg" alt="AWS S3" title="AWS S3">
+          <img src="/enterprise-icons/azure.svg" alt="Azure Blob Storage" title="Azure Blob Storage">
+          <img src="/enterprise-icons/gcp.svg" alt="Google Cloud Storage" title="Google Cloud Storage">
+        </div>
+      </div>
+    </section>
+  </div> <!-- End Features Tab -->
+
+  <!-- Pricing Tab -->
+  <div id="pricing" class="tab-content">
+    <section class="pricing-section">
+      <div class="pricing-container">
+        <h2>Simple, Transparent Pricing</h2>
+        <p class="pricing-subtitle">Choose the plan that works best for you. Try free for 7 days.</p>
+        
+        <div class="pricing-cards">
+          <!-- Monthly Plan -->
+          <div class="pricing-card">
+            <div class="pricing-plan">Monthly</div>
+            <div class="pricing-amount">
+              <span class="currency">$</span>14.20
+            </div>
+            <div class="pricing-period">per month, billed monthly</div>
+            
+            <ul class="pricing-features">
+              <li>Unlimited PDF processing</li>
+              <li>All validation rules</li>
+              <li>Custom calculations</li>
+              <li>Folder automation</li>
+              <li>Cloud storage integration</li>
+              <li>Export to CSV, Excel, PDF, JSON</li>
+              <li>7-day free trial</li>
+            </ul>
+            
+            <a href="https://rai89.gumroad.com/l/bdspjn" class="pricing-btn" target="_blank" rel="noopener" onclick="gtag('event', 'purchase_intent', {'event_category': 'engagement', 'event_label': 'monthly'});">Start Free Trial</a>
+          </div>
+
+          <!-- Annual Plan -->
+          <div class="pricing-card popular">
+            <span class="popular-badge">Save 12%</span>
+            <div class="pricing-plan">Annual</div>
+            <div class="pricing-amount">
+              <span class="currency">$</span>150
+            </div>
+            <div class="pricing-period">per year, billed annually</div>
+            
+            <ul class="pricing-features">
+              <li>Unlimited PDF processing</li>
+              <li>All validation rules</li>
+              <li>Custom calculations</li>
+              <li>Folder automation</li>
+              <li>Cloud storage integration</li>
+              <li>Export to CSV, Excel, PDF, JSON</li>
+              <li>7-day free trial</li>
+              <li>Priority support</li>
+            </ul>
+            
+            <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener" onclick="gtag('event', 'purchase_intent', {'event_category': 'engagement', 'event_label': 'annual'});">Start Free Trial</a>
+          </div>
+        </div>
+        
+        <p class="pricing-note">All prices exclude local taxes. Cancel anytime, no questions asked.</p>
+      </div>
+    </section>
+  </div> <!-- End Pricing Tab -->
+
+  <!-- About Tab -->
+  <div id="about" class="tab-content">
+    <section style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
+      <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">About Valido</h1>
+      
+      <div style="background: var(--bg-light); padding: 3rem; border-radius: 12px; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Built by Abhishek Rai</h2>
+        <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          Hi! I'm a software developer who built Valido to solve a real problem I encountered. As someone who has worked with PDF automation and data processing, I saw how tedious and time-consuming it was to manually validate and extract data from hundreds of PDF documents.
+        </p>
+        <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          Valido was created with privacy and performance as top priorities. Unlike cloud-based solutions, everything runs locally on your machine—your sensitive documents never leave your computer. This makes it perfect for industries like healthcare, legal, finance, and government where data privacy is critical.
+        </p>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Connect with me on <a href="https://www.linkedin.com/in/abhishek-rai-a75908231/" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none; font-weight: 600;">LinkedIn</a> or reach out at <a href="mailto:info@valido.site" style="color: var(--primary); text-decoration: none; font-weight: 600;">info@valido.site</a>.
+        </p>
+      </div>
+      
+      <div style="text-align: center; padding: 2rem; background: white; border: 2px solid var(--border); border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem;">Why Valido?</h3>
+        <p style="color: var(--text-light); margin-bottom: 2rem;">Fast, private, and powerful PDF automation for professionals</p>
+        <a href="#" onclick="showTab('download'); return false;" class="download-btn" style="display: inline-flex;">Get Started - 7 Day Free Trial</a>
+      </div>
+    </section>
+  </div> <!-- End About Tab -->
 
   <!-- Privacy Banner -->
+  <section class="privacy-banner">
   <section class="privacy-banner">
     <h2>Your Data Stays Yours</h2>
     <p>
@@ -899,10 +1160,26 @@
     <p>&copy; 2025 Valido. All rights reserved.</p>
   </footer>
 
-  <!-- Placeholder for Analytics (Add when ready) -->
-  <!-- 
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
-  -->
+  <script>
+    function showTab(tabName) {
+      // Hide all tabs
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      
+      // Remove active class from all nav items
+      const navItems = document.querySelectorAll('.nav-menu a');
+      navItems.forEach(item => item.classList.remove('active'));
+      
+      // Show selected tab
+      document.getElementById(tabName).classList.add('active');
+      
+      // Add active class to clicked nav item
+      document.getElementById('nav-' + tabName).classList.add('active');
+      
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+  </script>
 
 </body>
 </html>
