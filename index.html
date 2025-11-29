@@ -742,26 +742,70 @@
   <div id="home" class="tab-content active">
     <!-- Hero Section -->
     <section class="hero">
-      <h1>Validate and automate PDFs without uploading them anywhere</h1>
+      <div class="trial-badge">⚡ PDF Validation & Extraction Automation Platform</div>
+      <h1>Automate PDF Processing.<br/>End-to-End.</h1>
       <p class="tagline">
-        Extract data • Create calculations • Automate workflows
+        Watch folders, extract data, validate rules, run calculations, export results—all automatically. Desktop automation that works offline.
       </p>
       <p class="performance">
-        <strong>50 PDFs in under 3 seconds.</strong> Works offline.
+        <strong>Desktop app • 100% private • Works offline</strong> • Rated 5/5 on Softpedia
       </p>
       
-      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+      <!-- Use Case Badges -->
+      <div style="display: flex; gap: 1rem; justify-content: center; margin: 2rem 0 1rem; flex-wrap: wrap; font-size: 0.875rem;">
+        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px);">✓ Accountants</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px);">✓ Legal Teams</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px);">✓ Insurance</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px);">✓ Procurement</span>
+      </div>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
         <a href="#" onclick="showTab('download'); return false;" class="download-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
           </svg>
-          Get Started
-        </a>
-        <a href="#" onclick="showTab('features'); return false;" class="download-btn" style="background: rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.3);">
-          Learn More →
+          Start Free Trial (7 Days)
         </a>
       </div>
+      
+      <div class="price-info" style="margin-top: 1.5rem; font-size: 1rem;">
+        From <strong>$14.20/month</strong> • Unlimited processing • No credit card for trial
+      </div>
     </section>
+
+  <!-- Demo Video Section -->
+  <section id="demo-video" style="background: white; padding: 4rem 2rem; text-align: center;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-dark);">See End-to-End Automation</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.125rem;">
+        Watch PDFs automatically: extracted → validated → calculated → exported—all without manual intervention
+      </p>
+      
+      <!-- YouTube IFrame Player - Embedded, plays on page without redirecting -->
+      <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); max-width: 100%; aspect-ratio: 16/9; background: #000;">
+        <div id="youtube-player"></div>
+      </div>
+      
+      <div style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">3 sec</div>
+          <div style="color: var(--text-light); font-size: 0.875rem;">Per 50 PDFs</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">∞</div>
+          <div style="color: var(--text-light); font-size: 0.875rem;">Unlimited Processing</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">0</div>
+          <div style="color: var(--text-light); font-size: 0.875rem;">Cloud Uploads</div>
+        </div>
+      </div>
+      
+      <a href="#" onclick="showTab('download'); return false;" style="display: inline-flex; align-items: center; gap: 0.75rem; margin-top: 2rem; background: var(--primary); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s;">
+        Start Free Trial - No Credit Card Required
+      </a>
+    </div>
+  </section>
 
   <!-- Review Section -->
   <section class="review-section">
@@ -779,6 +823,62 @@
       </a>
     </div>
   </section>
+
+  <!-- ROI Comparison Section -->
+  <section style="background: var(--bg-light); padding: 4rem 2rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-dark);">Manual Processing vs Valido</h2>
+      <p style="color: var(--text-light); margin-bottom: 3rem; font-size: 1.125rem;">
+        See how much time (and money) you'll save
+      </p>
+      
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <thead>
+            <tr style="background: var(--primary); color: white;">
+              <th style="padding: 1.5rem; text-align: left; font-weight: 600;">Task</th>
+              <th style="padding: 1.5rem; text-align: center; font-weight: 600;">Manual Processing</th>
+              <th style="padding: 1.5rem; text-align: center; font-weight: 600; background: var(--primary-dark);">With Valido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 1.25rem; font-weight: 500;">Process 100 invoices</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--text-light);">~2 hours</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--success); font-weight: 700;">6 seconds ⚡</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-light);">
+              <td style="padding: 1.25rem; font-weight: 500;">Extract & validate data</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--text-light);">Manual typing, errors</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--success); font-weight: 700;">Automated, accurate ✓</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 1.25rem; font-weight: 500;">Calculate totals/taxes</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--text-light);">Excel formulas</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--success); font-weight: 700;">Built-in formulas ✓</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-light);">
+              <td style="padding: 1.25rem; font-weight: 500;">Monthly cost (500 docs)</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--text-light);">$400-800 in labor</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--success); font-weight: 700;">$14.20/mo 💰</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.25rem; font-weight: 500;">Data privacy</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--text-light);">Manual = secure</td>
+              <td style="padding: 1.25rem; text-align: center; color: var(--success); font-weight: 700;">100% local 🔒</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border-radius: 12px; text-align: center;">
+        <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">💡 Average Savings</div>
+        <div style="font-size: 2.5rem; font-weight: 800;">$9,400+ per year</div>
+        <div style="font-size: 1rem; opacity: 0.95; margin-top: 0.5rem;">Based on processing 500 documents/month at $20/hour labor cost vs $14.20/month</div>
+      </div>
+    </div>
+  </section>
+
   </div> <!-- End Home Tab -->
 
   <!-- Features Tab -->
@@ -797,6 +897,99 @@
         <div class="cloud-icon">
           <img src="enterprise-icons/gcp-icon.png" alt="Google Cloud Platform" title="Google Cloud Platform">
         </div>
+      </div>
+    </section>
+
+    <!-- Competitor Comparison Section -->
+    <section style="background: white; padding: 4rem 2rem;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; text-align: center; color: var(--text-dark);">Compare PDF Automation Tools</h2>
+        <p style="color: var(--text-light); margin-bottom: 3rem; font-size: 1.125rem; text-align: center;">
+          Honest comparison of core PDF automation features and pricing
+        </p>
+        
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 0.95rem;">
+            <thead>
+              <tr style="background: var(--primary); color: white;">
+                <th style="padding: 1rem; text-align: left; font-weight: 600; min-width: 180px;">Feature</th>
+                <th style="padding: 1rem; text-align: center; font-weight: 600; background: var(--primary-dark); min-width: 120px;">Valido</th>
+                <th style="padding: 1rem; text-align: center; font-weight: 600; min-width: 120px;">Docparser</th>
+                <th style="padding: 1rem; text-align: center; font-weight: 600; min-width: 120px;">Parseur</th>
+                <th style="padding: 1rem; text-align: center; font-weight: 600; min-width: 120px;">Adobe Acrobat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Data Extraction</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ Tables + Text</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">Manual only</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border); background: var(--bg-light);">
+                <td style="padding: 1rem; font-weight: 500;">Validation Rules</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ Custom rules</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">Limited</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">Basic</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Custom Calculations</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ Built-in formulas</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border); background: var(--bg-light);">
+                <td style="padding: 1rem; font-weight: 500;">Folder Automation</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ Watch folders</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓ Email</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓ Email</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Cloud Connectors</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ AWS, Azure, GCP</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓ API</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓ Zapier</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border); background: var(--bg-light);">
+                <td style="padding: 1rem; font-weight: 500;">Desktop / Offline Mode</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ 100% local</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗ Cloud only</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">✗ Cloud only</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">✓</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Batch Processing</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">✓ Unlimited</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">Plan limits</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">Plan limits</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">Manual</td>
+              </tr>
+              <tr style="border-bottom: 2px solid var(--primary); background: var(--bg-light);">
+                <td style="padding: 1rem; font-weight: 700; font-size: 1.05rem;">Monthly Price</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 800; font-size: 1.1rem;">$14.20</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-dark); font-weight: 600;">$89+</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-dark); font-weight: 600;">$99+</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-dark); font-weight: 600;">$29.99</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; font-weight: 500;">Document Limits</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success); font-weight: 700;">∞ Unlimited</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">300-1000/mo</td>
+                <td style="padding: 1rem; text-align: center; color: var(--text-light);">200-1000/mo</td>
+                <td style="padding: 1rem; text-align: center; color: var(--success);">Unlimited*</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-light); text-align: center;">
+          *Adobe Acrobat is a PDF editor, not an automation platform. Prices as of November 2025. Competitor features verified from public documentation.
+        </p>
       </div>
     </section>
 
@@ -869,9 +1062,32 @@
   <section class="pricing-section">
     <div class="pricing-container">
       <h2>Simple, Transparent Pricing</h2>
-      <p class="pricing-subtitle">Choose the plan that works best for you. Try free for 7 days.</p>
+      <p class="pricing-subtitle">Unlimited PDF processing • No hidden fees • Cancel anytime</p>
       
       <div class="pricing-cards">
+        <!-- Annual Plan (SHOW FIRST - Better deal) -->
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most Popular - Save $20</span>
+          <div class="pricing-plan">Annual</div>
+          <div class="pricing-amount">
+            <span class="currency">$</span>150
+          </div>
+          <div class="pricing-period">per year (billed annually)</div>
+          
+          <ul class="pricing-features">
+            <li>Unlimited PDF processing</li>
+            <li>All validation rules</li>
+            <li>Custom calculations</li>
+            <li>Folder automation</li>
+            <li>Cloud storage integration (AWS/Azure/GCP)</li>
+            <li>Export to CSV, Excel, PDF, JSON</li>
+            <li>7-day free trial</li>
+            <li>Priority support</li>
+          </ul>
+          
+          <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
+        </div>
+
         <!-- Monthly Plan -->
         <div class="pricing-card">
           <div class="pricing-plan">Monthly</div>
@@ -885,39 +1101,16 @@
             <li>All validation rules</li>
             <li>Custom calculations</li>
             <li>Folder automation</li>
-            <li>Cloud storage integration</li>
+            <li>Cloud storage integration (AWS/Azure/GCP)</li>
             <li>Export to CSV, Excel, PDF, JSON</li>
             <li>7-day free trial</li>
           </ul>
           
           <a href="https://rai89.gumroad.com/l/bdspjn" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
         </div>
-
-        <!-- Annual Plan -->
-        <div class="pricing-card popular">
-          <span class="popular-badge">Save 12%</span>
-          <div class="pricing-plan">Annual</div>
-          <div class="pricing-amount">
-            <span class="currency">$</span>150
-          </div>
-          <div class="pricing-period">per year, billed annually</div>
-          
-          <ul class="pricing-features">
-            <li>Unlimited PDF processing</li>
-            <li>All validation rules</li>
-            <li>Custom calculations</li>
-            <li>Folder automation</li>
-            <li>Cloud storage integration</li>
-            <li>Export to CSV, Excel, PDF, JSON</li>
-            <li>7-day free trial</li>
-            <li>Priority support</li>
-          </ul>
-          
-          <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
-        </div>
       </div>
       
-      <p class="pricing-note">All prices exclude local taxes. Cancel anytime, no questions asked.</p>
+      <p class="pricing-note">✓ No credit card required for trial • ✓ All features unlocked • ✓ Cancel anytime</p>
     </div>
   </section>
   </div> <!-- End Pricing Tab -->
@@ -927,35 +1120,38 @@
     <section class="hero">
       <h1>Download Valido</h1>
       <p class="tagline">
-        Get started with PDF automation today
+        Start automating your PDF workflows in 2 minutes
       </p>
       <p class="performance">
-        <strong>Latest version: 1.0.9</strong> • Windows 10/11
+        <strong>v1.0.9</strong> • Windows 10/11 • 7-day free trial • No credit card
       </p>
       
       <a href="https://github.com/Valido-App/valido-app.github.io/releases/download/v1.0.9/Valido-v1.0.9-Installer.zip" class="download-btn" onclick="gtag('event', 'download', {'event_category': 'engagement', 'event_label': 'v1.0.9'});">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
         </svg>
-        Download for Windows (v1.0.9)
+        Download Valido v1.0.9
       </a>
       
       <div style="margin-top: 2rem; background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 12px; max-width: 600px; text-align: left;">
-        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">System Requirements:</h3>
-        <ul style="list-style-position: inside; opacity: 0.95;">
-          <li>Windows 10 or Windows 11</li>
-          <li>4GB RAM (8GB recommended)</li>
-          <li>200MB disk space</li>
-          <li>Internet connection for cloud storage features (optional)</li>
+        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">✓ What You Get:</h3>
+        <ul style="list-style-position: inside; opacity: 0.95; margin-bottom: 1.5rem;">
+          <li>Full 7-day trial (no credit card)</li>
+          <li>Unlimited PDF processing</li>
+          <li>All features unlocked</li>
+          <li>Automatic updates</li>
         </ul>
         
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;">What's Included:</h3>
+        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">⚙️ Requirements:</h3>
         <ul style="list-style-position: inside; opacity: 0.95;">
-          <li>7-day free trial</li>
-          <li>Full feature access</li>
-          <li>Automatic updates</li>
-          <li>No credit card required</li>
+          <li>Windows 10 or 11 (64-bit)</li>
+          <li>4GB RAM minimum</li>
+          <li>200MB disk space</li>
         </ul>
+      </div>
+      
+      <div style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.9;">
+        💡 After trial: $150/year or $14.20/month • Cancel anytime
       </div>
     </section>
     
@@ -1117,25 +1313,29 @@
       <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">About Valido</h1>
       
       <div style="background: var(--bg-light); padding: 3rem; border-radius: 12px; margin-bottom: 3rem;">
-        <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Built for Privacy & Performance</h2>
+        <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Built by Someone Who Hated Manual PDF Work</h2>
         <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
-          Valido was created to solve a real problem: the tedious, time-consuming work of manually validating and extracting data from hundreds of PDF documents. We built it with privacy and performance as our top priorities.
+          Valido was born from frustration. After spending countless hours manually checking invoices, extracting data, and validating PDF documents, I realized there had to be a better way.
         </p>
         <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
-          Unlike cloud-based solutions, everything runs locally on your machine—your sensitive documents never leave your computer. This makes Valido perfect for industries like healthcare, legal, finance, and government where data privacy is critical.
+          Most PDF tools force you to upload sensitive documents to their cloud servers. That's a non-starter for legal firms, accountants, and anyone handling confidential information. So I built Valido to run 100% locally on your machine—your documents never leave your computer.
         </p>
         <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
-          We're committed to continuous improvement and listening to our users. Your feedback helps shape the future of Valido.
+          <strong>What makes Valido different:</strong><br>
+          • No per-document pricing (process unlimited PDFs)<br>
+          • No cloud upload required (100% private)<br>
+          • Built-in calculations (not just extraction)<br>
+          • Works offline (no internet needed after setup)
         </p>
         <p style="font-size: 1.125rem; line-height: 1.8;">
-          Have questions or feedback? Reach out at <a href="mailto:info@valido.site" style="color: var(--primary); text-decoration: none; font-weight: 600;">info@valido.site</a>
+          Still early days, but Valido already has a 5-star rating on Softpedia and is helping professionals save hours every week. Your feedback drives development—reach out anytime at <a href="mailto:info@valido.site" style="color: var(--primary); text-decoration: none; font-weight: 600;">info@valido.site</a>
         </p>
       </div>
       
       <div style="text-align: center; padding: 2rem; background: white; border: 2px solid var(--border); border-radius: 12px;">
-        <h3 style="margin-bottom: 1rem;">Why Valido?</h3>
-        <p style="color: var(--text-light); margin-bottom: 2rem;">Fast, private, and powerful PDF automation for professionals</p>
-        <a href="#" onclick="showTab('download'); return false;" class="download-btn" style="display: inline-flex;">Get Started - 7 Day Free Trial</a>
+        <h3 style="margin-bottom: 1rem;">Try It Risk-Free</h3>
+        <p style="color: var(--text-light); margin-bottom: 2rem;">7-day trial • No credit card • All features unlocked</p>
+        <a href="#" onclick="showTab('download'); return false;" class="download-btn" style="display: inline-flex;">Download Valido</a>
       </div>
     </section>
   </div> <!-- End About Tab -->
@@ -1181,6 +1381,35 @@
       
       // Scroll to top
       window.scrollTo(0, 0);
+    }
+
+    // YouTube IFrame API - Loads player on page
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtube-player', {
+        height: '100%',
+        width: '100%',
+        videoId: 'M16EYjNUK5U',
+        playerVars: {
+          'playsinline': 1,
+          'rel': 0, // Don't show related videos from other channels
+          'modestbranding': 1, // Minimal YouTube branding
+          'origin': 'https://valido.site' // Required for Error 153 fix
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Player is ready - user can click play button to start
+      console.log('YouTube player ready');
     }
   </script>
 
