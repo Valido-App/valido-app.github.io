@@ -44,14 +44,8 @@
     "description": "Valido is a PDF validation tool and PDF extraction software for automating batch PDF processing. This offline PDF automation tool validates documents, extracts data from tables, and runs custom calculations—all locally on your Windows machine.",
     "offers": {
       "@type": "Offer",
-      "price": "16",
+      "price": "14.20",
       "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "3",
-      "bestRating": "5"
     },
     "url": "https://valido.site/"
   }
@@ -80,6 +74,14 @@
       line-height: 1.6;
       background: white;
       padding-top: 70px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .page-section {
+      scroll-margin-top: 90px;
     }
 
     /* Navigation */
@@ -141,15 +143,6 @@
     .nav-cta:hover {
       background: var(--primary-dark);
       color: white !important;
-    }
-
-    /* Tab Content */
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
     }
 
     /* Hero Section */
@@ -828,12 +821,12 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo" onclick="showTab('home'); return false;">Valido</a>
+      <a href="#home" class="nav-logo">Valido</a>
       <ul class="nav-menu">
-        <li><a onclick="showTab('home'); return false;" class="active" id="nav-home">Home</a></li>
-        <li><a onclick="showTab('features'); return false;" id="nav-features">Features</a></li>
-        <li><a onclick="showTab('download'); return false;" id="nav-download">Download</a></li>
-        <li><a onclick="showTab('pricing'); return false;" id="nav-pricing">Pricing</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="/reviews.html" id="nav-reviews">Reviews</a></li>
         <li><a href="/blog/" id="nav-blog">Blog</a></li>
         <li><a href="mailto:info@valido.site" id="nav-contact">Contact</a></li>
@@ -842,7 +835,7 @@
   </nav>
 
   <!-- Home Tab -->
-  <div id="home" class="tab-content active">
+  <div id="home" class="page-section">
     <!-- Hero Section -->
     <section class="hero">
       <div class="trial-badge">⚡ PDF Validator & Data Extraction Automation Tool</div>
@@ -863,7 +856,7 @@
       </div>
       
       <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
-        <a href="#" onclick="showTab('download'); return false;" class="download-btn">
+  <a href="#download" class="download-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
           </svg>
@@ -904,7 +897,7 @@
         </div>
       </div>
       
-      <a href="#" onclick="showTab('download'); return false;" style="display: inline-flex; align-items: center; gap: 0.75rem; margin-top: 2rem; background: var(--primary); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s;">
+  <a href="#download" style="display: inline-flex; align-items: center; gap: 0.75rem; margin-top: 2rem; background: var(--primary); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s;">
         Start Free Trial - No Credit Card Required
       </a>
     </div>
@@ -979,20 +972,20 @@
   </div> <!-- End Home Tab -->
 
   <!-- Features Tab -->
-  <div id="features" class="tab-content">
+  <div id="features" class="page-section">
     <!-- Cloud Storage Section -->
     <section class="cloud-storage-section">
       <h3>Connect to Your Cloud Storage</h3>
       <p>Create automation jobs directly from your cloud storage accounts</p>
       <div class="cloud-icons">
         <div class="cloud-icon">
-          <img src="enterprise-icons/aws-icon.png" alt="Amazon AWS" title="Amazon AWS">
+          <img src="enterprise-icons/aws-icon.png" alt="Amazon Web Services cloud storage logo" title="Amazon Web Services">
         </div>
         <div class="cloud-icon">
-          <img src="enterprise-icons/azure-icon.png" alt="Microsoft Azure" title="Microsoft Azure">
+          <img src="enterprise-icons/azure-icon.png" alt="Microsoft Azure cloud storage logo" title="Microsoft Azure">
         </div>
         <div class="cloud-icon">
-          <img src="enterprise-icons/gcp-icon.png" alt="Google Cloud Platform" title="Google Cloud Platform">
+          <img src="enterprise-icons/gcp-icon.png" alt="Google Cloud Platform storage logo" title="Google Cloud Platform">
         </div>
       </div>
     </section>
@@ -1154,7 +1147,7 @@
   </div> <!-- End Features Tab -->
 
   <!-- Pricing Tab -->
-  <div id="pricing" class="tab-content">
+  <div id="pricing" class="page-section">
   <!-- Pricing Section -->
   <section class="pricing-section">
     <div class="pricing-container">
@@ -1182,7 +1175,7 @@
             <li>Priority support</li>
           </ul>
           
-          <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
+          <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener" onclick="gtag('event', 'pricing_trial_click', {'event_category': 'cta', 'event_label': 'annual'});">Start Free Trial</a>
         </div>
 
         <!-- Monthly Plan -->
@@ -1203,7 +1196,7 @@
             <li>7-day free trial</li>
           </ul>
           
-          <a href="https://rai89.gumroad.com/l/bdspjn" class="pricing-btn" target="_blank" rel="noopener">Start Free Trial</a>
+          <a href="https://rai89.gumroad.com/l/bdspjn" class="pricing-btn" target="_blank" rel="noopener" onclick="gtag('event', 'pricing_trial_click', {'event_category': 'cta', 'event_label': 'monthly'});">Start Free Trial</a>
         </div>
       </div>
       
@@ -1213,7 +1206,7 @@
   </div> <!-- End Pricing Tab -->
 
   <!-- Download Tab -->
-  <div id="download" class="tab-content">
+  <div id="download" class="page-section">
     <section class="hero">
       <h1>Download Valido</h1>
       <p class="tagline">
@@ -1223,7 +1216,7 @@
         <strong>v1.10.4</strong> • Windows 10/11 • 7-day free trial • No credit card
       </p>
       
-      <a href="https://github.com/Valido-App/valido-app.github.io/releases/download/v1.10.4/Valido-v1.10.4-Setup.exe" class="download-btn" onclick="gtag('event', 'download', {'event_category': 'engagement', 'event_label': 'v1.10.4'});">
+  <a href="https://github.com/Valido-App/valido-app.github.io/releases/download/v1.10.4/Valido-v1.10.4-Setup.exe" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'cta', 'event_label': 'v1.10.4'});">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
         </svg>
@@ -1268,144 +1261,8 @@
       </div>
     </section>
   </div> <!-- End Download Tab -->
-
-  <!-- Features Tab -->
-  <div id="features" class="tab-content">
-    <section style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
-      <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Powerful Features for PDF Automation</h1>
-      
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L4 6V12C4 17 7 21 12 23C17 21 20 17 20 12V6L12 2Z"/>
-              <circle cx="12" cy="12" r="3" fill="white"/>
-            </svg>
-          </div>
-          <h3>100% Private</h3>
-          <p>Your documents never leave your computer. Zero cloud upload, zero data retention. Perfect for sensitive files.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="6" y="4" width="12" height="4" rx="1"/>
-              <rect x="6" y="10" width="12" height="4" rx="1"/>
-              <rect x="6" y="16" width="12" height="4" rx="1"/>
-            </svg>
-          </div>
-          <h3>Batch Processing</h3>
-          <p>Process hundreds or thousands of PDFs at once. Upload files or ZIP archives up to 2000 pages.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2"/>
-              <path d="M8 2V6M16 2V6M4 10H20"/>
-            </svg>
-          </div>
-          <h3>Folder Automation</h3>
-          <p>Watch folders and automatically validate new PDFs on a schedule - hourly, daily, or weekly.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-            </svg>
-          </div>
-          <h3>Custom Calculations</h3>
-          <p>Extract data fields then create formulas using them. Calculate totals, percentages, differences. Use previous calculations in new ones.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2Z"/>
-              <path d="M14 2V8H20"/>
-            </svg>
-          </div>
-          <h3>Professional Reports</h3>
-          <p>Export results as CSV, Excel, PDF, or JSON. Clean formatting, ready to use.</p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Cloud Storage Section -->
-    <section class="cloud-storage-section">
-      <div class="cloud-storage-container">
-        <h3>Connect to Your Cloud Storage</h3>
-        <p>Create automation jobs directly from your cloud storage accounts</p>
-        <div class="cloud-icons">
-          <img src="/enterprise-icons/aws.svg" alt="AWS S3" title="AWS S3">
-          <img src="/enterprise-icons/azure.svg" alt="Azure Blob Storage" title="Azure Blob Storage">
-          <img src="/enterprise-icons/gcp.svg" alt="Google Cloud Storage" title="Google Cloud Storage">
-        </div>
-      </div>
-    </section>
-  </div> <!-- End Features Tab -->
-
-  <!-- Pricing Tab -->
-  <div id="pricing" class="tab-content">
-    <section class="pricing-section">
-      <div class="pricing-container">
-        <h2>Simple, Transparent Pricing</h2>
-        <p class="pricing-subtitle">Choose the plan that works best for you. Try free for 7 days.</p>
-        
-        <div class="pricing-cards">
-          <!-- Monthly Plan -->
-          <div class="pricing-card">
-            <div class="pricing-plan">Monthly</div>
-            <div class="pricing-amount">
-              <span class="currency">$</span>14.20
-            </div>
-            <div class="pricing-period">per month, billed monthly</div>
-            
-            <ul class="pricing-features">
-              <li>Unlimited PDF processing</li>
-              <li>All validation rules</li>
-              <li>Custom calculations</li>
-              <li>Folder automation</li>
-              <li>Cloud storage integration</li>
-              <li>Export to CSV, Excel, PDF, JSON</li>
-              <li>7-day free trial</li>
-            </ul>
-            
-            <a href="https://rai89.gumroad.com/l/bdspjn" class="pricing-btn" target="_blank" rel="noopener" onclick="gtag('event', 'purchase_intent', {'event_category': 'engagement', 'event_label': 'monthly'});">Start Free Trial</a>
-          </div>
-
-          <!-- Annual Plan -->
-          <div class="pricing-card popular">
-            <span class="popular-badge">Save 12%</span>
-            <div class="pricing-plan">Annual</div>
-            <div class="pricing-amount">
-              <span class="currency">$</span>150
-            </div>
-            <div class="pricing-period">per year, billed annually</div>
-            
-            <ul class="pricing-features">
-              <li>Unlimited PDF processing</li>
-              <li>All validation rules</li>
-              <li>Custom calculations</li>
-              <li>Folder automation</li>
-              <li>Cloud storage integration</li>
-              <li>Export to CSV, Excel, PDF, JSON</li>
-              <li>7-day free trial</li>
-              <li>Priority support</li>
-            </ul>
-            
-            <a href="https://rai89.gumroad.com/l/eyuiy" class="pricing-btn" target="_blank" rel="noopener" onclick="gtag('event', 'purchase_intent', {'event_category': 'engagement', 'event_label': 'annual'});">Start Free Trial</a>
-          </div>
-        </div>
-        
-        <p class="pricing-note">All prices exclude local taxes. Cancel anytime, no questions asked.</p>
-      </div>
-    </section>
-  </div> <!-- End Pricing Tab -->
-
   <!-- About Tab -->
-  <div id="about" class="tab-content">
+  <div id="about" class="page-section">
     <section style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
       <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">About Valido</h1>
       
@@ -1432,13 +1289,12 @@
       <div style="text-align: center; padding: 2rem; background: white; border: 2px solid var(--border); border-radius: 12px;">
         <h3 style="margin-bottom: 1rem;">Try It Risk-Free</h3>
         <p style="color: var(--text-light); margin-bottom: 2rem;">7-day trial • No credit card • All features unlocked</p>
-        <a href="#" onclick="showTab('download'); return false;" class="download-btn" style="display: inline-flex;">Download Valido</a>
+  <a href="#download" class="download-btn" style="display: inline-flex;">Download Valido</a>
       </div>
     </section>
   </div> <!-- End About Tab -->
 
   <!-- Privacy Banner -->
-  <section class="privacy-banner">
   <section class="privacy-banner">
     <h2>Your Data Stays Yours</h2>
     <p>
@@ -1469,25 +1325,6 @@
   </footer>
 
   <script>
-    function showTab(tabName) {
-      // Hide all tabs
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      
-      // Remove active class from all nav items
-      const navItems = document.querySelectorAll('.nav-menu a');
-      navItems.forEach(item => item.classList.remove('active'));
-      
-      // Show selected tab
-      document.getElementById(tabName).classList.add('active');
-      
-      // Add active class to clicked nav item
-      document.getElementById('nav-' + tabName).classList.add('active');
-      
-      // Scroll to top
-      window.scrollTo(0, 0);
-    }
-
     // YouTube IFrame API - Loads player on page
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
@@ -1495,6 +1332,7 @@
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
     var player;
+    var hasTrackedVideoPlay = false;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('youtube-player', {
         height: '100%',
@@ -1507,7 +1345,8 @@
           'origin': 'https://valido.site' // Required for Error 153 fix
         },
         events: {
-          'onReady': onPlayerReady
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
         }
       });
     }
@@ -1515,6 +1354,18 @@
     function onPlayerReady(event) {
       // Player is ready - user can click play button to start
       console.log('YouTube player ready');
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING && !hasTrackedVideoPlay) {
+        hasTrackedVideoPlay = true;
+        if (typeof gtag === 'function') {
+          gtag('event', 'video_play', {
+            'event_category': 'engagement',
+            'event_label': 'demo_video'
+          });
+        }
+      }
     }
   </script>
 
