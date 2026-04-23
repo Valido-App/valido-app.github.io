@@ -1,10 +1,10 @@
-⭐ Valido was recently reviewed by Softpedia and rated 5/5!  
+⭐ Valido was recently reviewed by Softpedia.  
 Read the review: https://www.softpedia.com/get/Office-tools/PDF/Valido.shtml
 
 
 Valido — PDF automation tool (website)
 
-This repository contains the static website for Valido ((https://valido.site).
+This repository contains the static website for Valido (https://valido.site).
 
 
 License & contact
